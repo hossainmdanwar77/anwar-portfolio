@@ -208,12 +208,6 @@ header.scrolled{background:rgba(8,13,26,.88);backdrop-filter:blur(16px);border-c
 .hero-nameplate .np-dot{width:10px;height:10px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.28);flex:none}
 .hero-nameplate .np-role{font-size:.86rem;font-weight:600;color:rgba(255,255,255,.86);margin-top:4px}
 @media(max-width:560px){.hero-nameplate{padding:56px 20px 18px}}
-.float-card{position:absolute;display:flex;align-items:center;gap:10px;background:rgba(17,28,50,.94);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;padding:12px 16px;font-weight:800;font-size:.88rem;box-shadow:0 18px 36px rgba(0,0,0,.14);animation:floaty 5.5s ease-in-out infinite}
-.float-card small{display:block;font-weight:600;color:var(--muted);font-size:.74rem}
-.float-card .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--grad);color:#fff;flex:none}
-.float-card .ic svg{width:19px;height:19px}
-.fc1{top:22px;left:-24px}.fc2{bottom:26px;right:-16px;animation-delay:1.4s}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
 .marquee{border-block:1px solid var(--line);background:rgba(17,28,50,.55);overflow:hidden;padding:16px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee-track{display:flex;gap:52px;width:max-content;animation:scrollx 30s linear infinite;font-family:var(--font-d);font-weight:700;color:var(--muted2);white-space:nowrap}
 .marquee-track span{display:flex;align-items:center;gap:52px}
@@ -378,7 +372,6 @@ footer p{color:var(--muted);font-size:.93rem;max-width:300px}
   .hero{padding:126px 0 70px}
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
   .hero-visual{max-width:320px;justify-self:start}
-  .fc1{left:6px}.fc2{right:6px;bottom:auto;top:-26px}
   .g3,.g2{grid-template-columns:1fr}
   .contact-banner{grid-template-columns:1fr}
   .contact-banner .cb-text{padding:38px 28px 8px}
@@ -510,8 +503,6 @@ header.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.08)}
           <div class="np-role">AI Automation Specialist &amp; WordPress Developer — available for new projects</div>
         </div>
       </div>
-      <div class="float-card fc1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg></span><span>n8n Workflows<small>Automated, 24/7</small></span></div>
-      <div class="float-card fc2"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg></span><span>AI Agents<small>Support &amp; sales, on autopilot</small></span></div>
     </div>
   </div>
 </section>
@@ -1274,7 +1265,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
     gsap.from('.hero-meta .chip', {y:16, opacity:0, duration:.5, delay:.42, stagger:.08, ease:'power2.out'});
     gsap.from('.hero-stats .stat', {y:18, opacity:0, duration:.55, delay:.52, stagger:.09, ease:'power2.out'});
     gsap.from('.hero-visual', {y:42, opacity:0, scale:.965, duration:1, delay:.2, ease:'power3.out'});
-    gsap.from('.float-card', {opacity:0, duration:.8, delay:.85, stagger:.16, ease:'power2.out'});
     if(window.ScrollTrigger){
       gsap.registerPlugin(ScrollTrigger);
       gsap.to('.hero-shapes', {yPercent:14, opacity:.45, ease:'none',
